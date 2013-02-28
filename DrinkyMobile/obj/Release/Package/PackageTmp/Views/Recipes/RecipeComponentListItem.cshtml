@@ -1,0 +1,18 @@
+﻿@model DrinkyMobile.Models.Recipes.RecipeComponentListItemModel
+@using Drinky.MVC.Markup;
+@using Drinky.MVC;
+
+@using (Html.BeginDictionaryItemScope(Model.ComponentId.Value))
+{ 
+<li class="recipe-component-list-item" data-component-id="@Model.ComponentId">
+  @Html.HiddenFor(x => x.ComponentId)
+  @Html.HiddenFor(x => x.IngredientId)
+  @Html.HiddenFor(x => x.UnitOfMeasureId)
+  @Html.HiddenFor(x => x.Quantity)
+  @Html.HiddenFor(x => x.BaseSortOrder)
+
+
+<a href="@Model.EditURL" data-icon="info"  data-rel="dialog" >
+    <span> @Model.Description</span> </a>
+</li> 
+}

@@ -1,0 +1,46 @@
+﻿@model DrinkyMobile.Models.IngredientTypes.IngredientTypeViewModel
+@using Drinky.MVC.Markup;
+@using Drinky.MVC;
+
+<div data-role="page"  data-title="Ingredient Type  - @Model.Name" data-dom-cache="false" id="page_ingredient_type_view" >
+    @Html.Partial("MainHeader")
+
+	<div data-role="content">	
+
+    <form action="/IngredientTypes/Add" method="post" id="view_ingredient_form">
+
+        <div data-role="fieldcontain" >
+            @Html.LabelFor(x => x.Name, "Name:")
+            @Html.DisplayFor(x => x.Name)
+            
+        </div>
+
+
+        <div data-role="fieldcontain" >
+            @Html.LabelFor(x => x.IngredientCount, "Ingredient Count:")
+            @Html.DisplayFor(x => x.IngredientCount )
+            
+        </div>
+
+
+
+        <div data-role="footer"  data-position="fixed" >
+            <div style="padding:6px;" data-role="controlgroup" data-type="horizontal">
+            <a href="/IngredientTypes/List/" data-role="button"  data-icon="back" data-mini="true">Back</a>
+            <a href="/IngredientTypes/ConfirmDelete/@Model.Id" data-role="button"  data-icon="delete" data-mini="true" action="delete"  data-rel="dialog">Delete</a>
+            <a href="/IngredientTypes/Edit/@Model.Id" data-role="button"  data-icon="edit" data-mini="true">Edit</a>
+
+            </div>
+        </div>
+    </form>
+
+
+
+
+    
+</div>
+
+
+
+
+

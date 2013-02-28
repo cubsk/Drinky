@@ -1,0 +1,7 @@
+C:\dev\Drinky\DrinkyWeb\bin\DrinkyWeb.dll
+C:\dev\Drinky\DrinkyWeb\bin\DrinkyWeb.pdb
+C:\dev\Drinky\DrinkyWeb\bin\EntityFramework.dll
+C:\dev\Drinky\DrinkyWeb\bin\EntityFramework.xml
+C:\dev\Drinky\DrinkyWeb\obj\Debug\ResolveAssemblyReference.cache
+C:\dev\Drinky\DrinkyWeb\obj\Debug\DrinkyWeb.dll
+C:\dev\Drinky\DrinkyWeb\obj\Debug\DrinkyWeb.pdb

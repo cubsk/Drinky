@@ -1,0 +1,29 @@
+﻿@model DrinkyMobile.Models.Recipes.RecipeIngredientsListModel
+
+
+<div data-role="page"  data-title="Recipes By Ingredient">
+    @Html.Partial("MainHeader")
+
+	<div data-role="content">	
+        <ul data-role="listview" data-filter="true" data-filter-placeholder="Search recipes..." >
+
+        @foreach (var ingredientGroup in @Model.IngredientGroups)
+        { 
+            <li data-role="list-divider">@ingredientGroup.IngredientTypeName  - @ingredientGroup.IngredientName <span class="ui-li-count">@ingredientGroup.Recipes.Count</span></li>    
+            
+            foreach (var recipe in ingredientGroup.Recipes)
+            { 
+	            <li data-filtertext="@recipe.RecipeName @ingredientGroup.IngredientName @ingredientGroup.IngredientTypeName" >
+                <a href="/Recipes/View/@recipe.RecipeId">
+                @recipe.RecipeName - @recipe.RecipeQuantity 
+                </a>
+                </li>    
+            }
+        }
+        </ul>
+	</div>
+    <div data-role="footer" class="ui-bar" data-position="fixed" >
+        <a href="/Recipes/Edit/" data-role="button" data-icon="plus" data-ajax="false" >New Recipe</a>
+    </div>
+</div>
+

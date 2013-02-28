@@ -1,0 +1,36 @@
+﻿@model DrinkyMobile.Models.IngredientTypes.IngredientTypeEditModel
+@using Drinky.MVC.Markup;
+@using Drinky.MVC;
+
+<div data-role="page"  data-title="Edit Ingredient Type - @Model.Name" data-dom-cache="false">
+    @Html.Partial("MainHeader")
+
+	<div data-role="content">	
+
+    <form action="/IngredientTypes/Edit/" method="post" id="edit_ingredient_type_form">
+        @Html.HiddenFor(x => x.Id)
+
+        <div data-role="fieldcontain" >
+            @Html.LabelFor(x => x.Name, "Name:")
+            @Html.TextBoxFor(x => x.Name)
+            
+        </div>
+
+
+
+
+        <div>
+        @Html.ValidationSummary("Please correct the following errors:")
+        </div>
+
+        <div data-role="footer"  data-position="fixed" >
+            <div style="padding:6px;" data-role="controlgroup" data-type="horizontal">
+            <a href="/IngredientTypes/List/" data-role="button"  data-icon="back" data-mini="true">Cancel</a>
+            <button type="submit" data-icon="check"  data-mini="true">Save</button>
+            </div>
+        </div>
+    </form>
+
+
+</div>
+

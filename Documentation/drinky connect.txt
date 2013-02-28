@@ -1,0 +1,4 @@
+login: drinky_login@fpjqs1lft8
+password: wr6d5ana4!
+servername: AMtOnm6vvP7NFJX7
+server: fpjqs1lft8.database.windows.net

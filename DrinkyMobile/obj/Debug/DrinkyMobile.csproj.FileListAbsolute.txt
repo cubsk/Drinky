@@ -1,0 +1,7 @@
+C:\dev\Drinky\DrinkyMobile\bin\DrinkyMobile.dll
+C:\dev\Drinky\DrinkyMobile\bin\DrinkyMobile.pdb
+C:\dev\Drinky\DrinkyMobile\bin\EntityFramework.dll
+C:\dev\Drinky\DrinkyMobile\bin\EntityFramework.xml
+C:\dev\Drinky\DrinkyMobile\obj\Debug\ResolveAssemblyReference.cache
+C:\dev\Drinky\DrinkyMobile\obj\Debug\DrinkyMobile.dll
+C:\dev\Drinky\DrinkyMobile\obj\Debug\DrinkyMobile.pdb

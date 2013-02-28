@@ -1,0 +1,56 @@
+﻿@model DrinkyMobile.Models.Recipes.RecipeViewModel
+@using Drinky.MVC.Markup;
+@using Drinky.MVC;
+
+<div data-role="page"  data-title="Recipe - @Model.Name" data-dom-cache="false" id="page_recipe_view" >
+    @Html.Partial("MainHeader")
+
+	<div data-role="content">	
+
+
+        <div data-role="fieldcontain" >
+            @Html.LabelFor(x => x.Name, "Name:")
+            @Html.DisplayFor(x => x.Name)
+            
+        </div>
+
+        <div data-role="fieldcontain">
+            @Html.LabelFor(x => x.GlasswareType, "Glassware:")
+            @Html.DisplayFor(x => x.GlasswareType)
+
+        </div>
+
+        <div data-role="fieldcontain">
+            @Html.LabelFor(x => x.Components, "Ingredients:")
+            <ul data-role="listview" data-inset="true">
+            @foreach (var component in Model.Components)
+            { 
+                <li>@component.Description</li>
+            }
+            </ul>
+        </div>
+
+        <div data-role="fieldcontain">
+            @Html.LabelFor(x => x.Preperation, "Preperation:")
+            @Html.DisplayFor(x => x.Preperation)
+        </div>
+
+
+
+        <div data-role="footer"  data-position="fixed" >
+            <div style="padding:6px;" data-role="controlgroup" data-type="horizontal">
+            <a href="/Recipes/List/" data-role="button"  data-icon="back" data-mini="true" data-rel="back">Back</a>
+            <a href="/Recipes/ConfirmDelete/@Model.Id" data-role="button"  data-icon="delete" data-mini="true" action="delete"  data-rel="dialog">Delete</a>
+            <a href="/Recipes/Edit/@Model.Id" data-role="button"  data-icon="edit" data-mini="true" data-ajax="false" >Edit</a>
+
+            </div>
+        </div>
+
+
+    
+</div>
+
+
+
+
+

@@ -1,0 +1,14 @@
+C:\dev\Drinky\Drinky.TestHarness\bin\Release\Drinky.TestHarness.exe.config
+C:\dev\Drinky\Drinky.TestHarness\bin\Release\Drinky.TestHarness.exe
+C:\dev\Drinky\Drinky.TestHarness\bin\Release\Drinky.TestHarness.pdb
+C:\dev\Drinky\Drinky.TestHarness\bin\Release\Drinky.DAC.dll
+C:\dev\Drinky\Drinky.TestHarness\bin\Release\FluentNHibernate.dll
+C:\dev\Drinky\Drinky.TestHarness\bin\Release\NHibernate.dll
+C:\dev\Drinky\Drinky.TestHarness\bin\Release\Iesi.Collections.dll
+C:\dev\Drinky\Drinky.TestHarness\bin\Release\Drinky.DAC.pdb
+C:\dev\Drinky\Drinky.TestHarness\bin\Release\FluentNHibernate.xml
+C:\dev\Drinky\Drinky.TestHarness\bin\Release\NHibernate.xml
+C:\dev\Drinky\Drinky.TestHarness\bin\Release\Iesi.Collections.xml
+C:\dev\Drinky\Drinky.TestHarness\obj\x86\Release\ResolveAssemblyReference.cache
+C:\dev\Drinky\Drinky.TestHarness\obj\x86\Release\Drinky.TestHarness.exe
+C:\dev\Drinky\Drinky.TestHarness\obj\x86\Release\Drinky.TestHarness.pdb

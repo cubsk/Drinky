@@ -1,0 +1,52 @@
+﻿@model DrinkyMobile.Models.Recipes.RecipeComponentModel
+@using Drinky.MVC.Markup;
+@using Drinky.MVC;
+
+
+
+<div data-role="dialog" id="addIngredientToRecipe" data-title="Add Ingredient" data-dom-cache="false" class="addIngredientToRecipe">
+<div data-role="content">
+
+<form action="/Recipes/EditComponent" method="post" id="add_ingredient_form">
+
+    @Html.HiddenFor(x=> x.ComponentId)
+    <div class="validation-wrapper">
+         @Html.ValidationSummary("Please correct the following errors:")
+    </div>
+
+    <div data-role="fieldcontain" >
+        @Html.RadioButtonListFor("Unit of Measure", x => x.UnitOfMeasureId, Model.UnitsOfMeasure, true, false)
+    </div>
+
+     <div data-role="fieldcontain" >
+        @Html.LabelFor(x => x.Quantity, "Quantity:")
+        <span>
+        <button type="button" data-icon="minus" data-inline="true" data-iconpos="notext" class="quantity-minus"></button>
+        @Html.TextBoxFor(x => x.Quantity, new { style = "width: 25% !important;", data_increment = @Model.Increment} )
+        <button type="button"  data-icon="plus" data-inline="true" data-iconpos="notext" class="quantity-plus"></button>
+        </span>
+     </div>
+	<div data-role="fieldcontain">
+        <fieldset data-role="controlgroup">
+	    <legend>Ingredient:</legend>
+            @Html.LabelFor(x => x.IngredientTypeId, "Ingredient Type:")
+            @Html.DropDownListFor( x => x.IngredientTypeId, Model.IngredientTypes)
+            @Html.LabelFor(x => x.IngredientId, "Ingredient:")
+            @Html.DropDownListFor(x => x.IngredientId, Model.Ingredients)
+        </fieldset>
+	</div>
+
+
+
+    <button data-theme="b" data-icon="check" action="save">Save</button>
+    <a href="#" data-role="button" data-theme="c" data-rel="back" data-icon="back">Cancel</a>
+    @if (Model.ComponentId.HasValue)
+    { 
+        <a href="#" data-role="button" data-theme="d" data-rel="back" data-icon="delete" action="delete">Delete</a>
+    }
+
+
+</form>
+</div>
+
+</div>

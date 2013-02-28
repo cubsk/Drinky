@@ -1,0 +1,5 @@
+﻿@model DrinkyMobile.Models.Recipes.IngredientsByTypeModel
+@using Drinky.MVC.Markup;
+@using Drinky.MVC;
+
+@Html.DropDownListFor(x => x.IngredientId, Model.Ingredients)

@@ -1,0 +1,50 @@
+﻿@model DrinkyMobile.Models.Ingredients.IngredientViewModel
+@using Drinky.MVC.Markup;
+@using Drinky.MVC;
+
+<div data-role="page"  data-title="Ingredient - @Model.Name" data-dom-cache="false" id="page_ingredient_view" >
+    @Html.Partial("MainHeader")
+
+	<div data-role="content">	
+
+    <form action="/Ingredients/Add" method="post" id="add_ingredient_form">
+
+        <div data-role="fieldcontain" >
+            @Html.LabelFor(x => x.Name, "Name:")
+            @Html.DisplayFor(x => x.Name)
+            
+        </div>
+
+        <div data-role="fieldcontain">
+            @Html.LabelFor(x => x.TypeName, "Type:")
+            @Html.DisplayFor(x => x.TypeName)
+
+        </div>
+
+        <div data-role="fieldcontain">
+            @Html.LabelFor(x => x.Description, "Description:")
+            @Html.DisplayFor(x => x.Description)
+        </div>
+
+
+
+        <div data-role="footer"  data-position="fixed" >
+            <div style="padding:6px;" data-role="controlgroup" data-type="horizontal">
+            <a href="/Ingredients/List/" data-role="button"  data-icon="back" data-mini="true">Back</a>
+            <a href="/Ingredients/ConfirmDelete/@Model.Id" data-role="button"  data-icon="delete" data-mini="true" action="delete"  data-rel="dialog">Delete</a>
+            <a href="/Ingredients/Edit/@Model.Id" data-role="button"  data-icon="edit" data-mini="true">Edit</a>
+
+            </div>
+        </div>
+    </form>
+
+
+
+
+    
+</div>
+
+
+
+
+

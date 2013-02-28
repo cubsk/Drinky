@@ -1,0 +1,11 @@
+C:\dev\Drinky\Drinky.DAC\bin\Release\Drinky.DAC.dll
+C:\dev\Drinky\Drinky.DAC\bin\Release\Drinky.DAC.pdb
+C:\dev\Drinky\Drinky.DAC\bin\Release\FluentNHibernate.dll
+C:\dev\Drinky\Drinky.DAC\bin\Release\Iesi.Collections.dll
+C:\dev\Drinky\Drinky.DAC\bin\Release\NHibernate.dll
+C:\dev\Drinky\Drinky.DAC\bin\Release\FluentNHibernate.xml
+C:\dev\Drinky\Drinky.DAC\bin\Release\Iesi.Collections.xml
+C:\dev\Drinky\Drinky.DAC\bin\Release\NHibernate.xml
+C:\dev\Drinky\Drinky.DAC\obj\Release\ResolveAssemblyReference.cache
+C:\dev\Drinky\Drinky.DAC\obj\Release\Drinky.DAC.dll
+C:\dev\Drinky\Drinky.DAC\obj\Release\Drinky.DAC.pdb

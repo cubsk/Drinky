@@ -1,0 +1,56 @@
+﻿@model DrinkyMobile.Models.Recipes.RecipeEditModel
+@using Drinky.MVC.Markup;
+@using Drinky.MVC;
+
+    <div data-role="page"  @(Model.Id.HasValue ? Html.Raw("data-title=\"Edit Recipe - " + Model.Name  +"\"") : Html.Raw("data-title=\"New Recipe\"")) data-dom-cache="true" id="recipe_edit_page">
+
+    @Html.Partial("MainHeader")
+
+	<div data-role="content">	
+
+    <form action="/Recipes/Edit/" method="post" id="add_recipe_form" >
+        @Html.HiddenFor(x => x.Id)
+
+        <div data-role="fieldcontain" >
+            @Html.LabelFor(x => x.Name, "Name:")
+            @Html.TextBoxFor(x => x.Name)
+        </div>
+
+        <div data-role="fieldcontain" >
+            @Html.Label("ingredients_listing", "Ingredients:")
+            
+         <ul data-role="listview" data-inset="true" id="ingredients_listing" list-icon="info" >
+            @foreach(var component in Model.Components.Values.ToList().OrderBy(x=> x.BaseSortOrder).ThenByDescending(x=> x.Quantity) )
+            {
+                Html.RenderPartial("RecipeComponentListItem", component,
+                                 new ViewDataDictionary { TemplateInfo = new System.Web.Mvc.TemplateInfo { HtmlFieldPrefix = "Components"} });
+            }
+        </ul>
+        <a href="/Recipes/AddComponent/" data-role="button" data-icon="plus"   data-rel="dialog">Add Ingredient</a>
+
+        </div>
+
+        <div data-role="fieldcontain" >
+            @Html.RadioButtonListFor("Glassware", x => x.GlasswareType, Model.GlasswareTypes)
+        </div>
+
+        <div data-role="fieldcontain" >
+            @Html.LabelFor(x => x.Preperation, "Preparation:")
+            @Html.TextAreaFor(x => x.Preperation)
+        </div>
+
+        <div>
+        @Html.ValidationSummary("Please correct the following errors:")
+        </div>
+
+        <div data-role="footer"  data-position="fixed" >
+            <div style="padding:6px;" data-role="controlgroup" data-type="horizontal">
+            <a href="/Recipes/List/" data-role="button"  data-icon="back" data-mini="true">Cancel</a>
+            <button type="submit" data-icon="check"  data-mini="true">Save</button>
+            </div>
+        </div>
+    </form>
+
+
+</div>
+

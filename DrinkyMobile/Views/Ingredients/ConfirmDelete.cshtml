@@ -1,0 +1,12 @@
+﻿@model DrinkyMobile.Models.Ingredients.IngredientModel
+@using Drinky.MVC.Markup;
+@using Drinky.MVC;
+
+
+<div data-role="dialog" id="sure" data-title="Are you sure?">
+  <div data-role="content">
+    <h3>Are you sure you want to delete this ingredient?</h3>
+    <a href="/Ingredients/Delete/@Model.Id" data-role="button" data-theme="b">Yes</a>
+    <a href="#" data-role="button" data-theme="c" data-rel="back">No</a>
+  </div>
+</div>

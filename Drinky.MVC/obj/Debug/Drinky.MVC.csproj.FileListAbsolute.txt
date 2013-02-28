@@ -1,0 +1,5 @@
+C:\dev\Drinky\Drinky.MVC\bin\Debug\Drinky.MVC.dll
+C:\dev\Drinky\Drinky.MVC\bin\Debug\Drinky.MVC.pdb
+C:\dev\Drinky\Drinky.MVC\obj\Debug\ResolveAssemblyReference.cache
+C:\dev\Drinky\Drinky.MVC\obj\Debug\Drinky.MVC.dll
+C:\dev\Drinky\Drinky.MVC\obj\Debug\Drinky.MVC.pdb

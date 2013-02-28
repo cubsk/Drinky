@@ -1,0 +1,35 @@
+﻿.ui-icon-recipe{
+	background-image: url("/Content/Images/drink-martini.png");
+}
+
+label.ui-validation-error
+{
+    color: Red;
+}
+
+.validation-summary-errors li
+{
+    list-style-image: url('Images/error.png');
+    color: Red;
+}
+
+.field-validation-error
+{
+    background-image: url('Images/error.png');
+    background-repeat:no-repeat;
+    padding-left: 24px;
+    margin-left: 25%;
+    display:block;
+    margin-top: 5px;
+}
+
+/* Recipes */
+.recipe-menu.is-favorite li.recipe-favorite-action.make-favorite
+{
+    display: none;
+}
+
+.recipe-menu.is-not-favorite li.recipe-favorite-action.remove-favorite
+{
+    display: none;
+}

@@ -1,0 +1,7 @@
+C:\dev\Drinky\Codegoggles.Epub\bin\Debug\Codegoggles.Epub.dll
+C:\dev\Drinky\Codegoggles.Epub\bin\Debug\Codegoggles.Epub.pdb
+C:\dev\Drinky\Codegoggles.Epub\bin\Debug\Ionic.Zip.dll
+C:\dev\Drinky\Codegoggles.Epub\bin\Debug\Ionic.Zip.xml
+C:\dev\Drinky\Codegoggles.Epub\obj\Debug\ResolveAssemblyReference.cache
+C:\dev\Drinky\Codegoggles.Epub\obj\Debug\Codegoggles.Epub.dll
+C:\dev\Drinky\Codegoggles.Epub\obj\Debug\Codegoggles.Epub.pdb

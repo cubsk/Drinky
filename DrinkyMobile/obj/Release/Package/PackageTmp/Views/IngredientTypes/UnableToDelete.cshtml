@@ -1,0 +1,11 @@
+﻿@model DrinkyMobile.Models.IngredientTypes.IngredientTypeViewModel
+@using Drinky.MVC.Markup;
+@using Drinky.MVC;
+
+
+<div data-role="dialog" id="sure" data-title="Cannot delete ingredient type">
+  <div data-role="content">
+    <h3>You cannot delete ingredient type  @Model.Name as it is currently used by at least one ingredient. </h3>
+    <a href="#" data-role="button" data-theme="c" data-rel="back">Okay</a>
+  </div>
+</div>

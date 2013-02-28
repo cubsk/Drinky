@@ -1,0 +1,61 @@
+﻿@model DrinkyMobile.Models.Recipes.RecipeListModel
+
+
+<div data-role="page"  data-title="Recipes">
+    @Html.Partial("MainHeader")
+
+	<div data-role="content">	
+
+
+
+    <ul class="recipe-list" data-role="listview" data-filter="true"  data-filter-placeholder="Search recipes..." >
+            @foreach (var recipe in Model.Recipes)
+            { 
+	            <li data-filtertext="@recipe.Name" class="recipe-list-item" recipe-id="@recipe.Id">
+                
+                <a href="/Recipes/View/@recipe.Id">
+                @if (recipe.IsFavorite)
+                {
+                    <img src="/Content/Images/star-full.png" class="ui-li-icon recipe-favorite-status" />
+                }
+                else
+                { 
+                    <img src="/Content/Images/star-empty.png" class="ui-li-icon recipe-favorite-status" />
+                }
+                @recipe.Name</a>
+                <a href="#@recipe.Id" data-rel="popup" >Actions</a>
+                </li>    
+            }
+    </ul>
+
+    <!-- add our list item menus below the list, so not as to confuse the parent list view plug-in -->
+    @foreach (var recipe in Model.Recipes)
+    { 
+  
+            var cssClass = (recipe.IsFavorite) ? "is-favorite" : "is-not-favorite";
+  
+
+        <div data-role="popup" id="@recipe.Id" data-theme="a" data-position-to="window" class="recipe-menu @cssClass">
+        <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-left">Close</a>
+	        <ul data-role="listview" data-inset="true" style="min-width:230px;" data-theme="b">
+                <li> <a href="/Recipes/View/@recipe.Id">View</a></li>
+                <li><a href="/Recipes/Edit/@recipe.Id">Edit</a></li>
+                <li style="display:none" class="test-class"><a href="/Recipes/Edit/@recipe.Id"  >Interesting</a></li>
+
+		        <li class="recipe-favorite-action remove-favorite"><a href="#" >Remove From <br />Favorites</a></li>
+		        <li class="recipe-favorite-action make-favorite"><a href="#" >Mark As Favorite</a></li>
+		        <li><a href="methods.html">Similiar Drinks</a></li>
+	        </ul>
+        </div>
+        
+    }
+
+	</div>
+
+    <div data-role="footer" class="ui-bar" data-position="fixed" >
+        <a href="/Recipes/Edit/" data-role="button" data-icon="plus" data-ajax="false" >New Recipe</a>
+    </div>
+
+
+</div>
+

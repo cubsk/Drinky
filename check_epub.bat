@@ -1,0 +1,1 @@
+java -jar epubcheck-3.0b5/epubcheck-3.0b5.jar C:\temp\EpubTest\test.epub
