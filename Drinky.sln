@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drinky.TestHarness", "Drink
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codegoggles.Epub", "Codegoggles.Epub\Codegoggles.Epub.csproj", "{405D81A2-6F3F-48E4-B7F2-978EBBEC3776}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drinky.API", "Drinky.API\Drinky.API.csproj", "{EE1D00D7-6C28-4F8B-BAA3-DE46D9F98730}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -75,6 +77,16 @@ Global
 		{405D81A2-6F3F-48E4-B7F2-978EBBEC3776}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{405D81A2-6F3F-48E4-B7F2-978EBBEC3776}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{405D81A2-6F3F-48E4-B7F2-978EBBEC3776}.Release|x86.ActiveCfg = Release|Any CPU
+		{EE1D00D7-6C28-4F8B-BAA3-DE46D9F98730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE1D00D7-6C28-4F8B-BAA3-DE46D9F98730}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE1D00D7-6C28-4F8B-BAA3-DE46D9F98730}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{EE1D00D7-6C28-4F8B-BAA3-DE46D9F98730}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{EE1D00D7-6C28-4F8B-BAA3-DE46D9F98730}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EE1D00D7-6C28-4F8B-BAA3-DE46D9F98730}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE1D00D7-6C28-4F8B-BAA3-DE46D9F98730}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE1D00D7-6C28-4F8B-BAA3-DE46D9F98730}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{EE1D00D7-6C28-4F8B-BAA3-DE46D9F98730}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{EE1D00D7-6C28-4F8B-BAA3-DE46D9F98730}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

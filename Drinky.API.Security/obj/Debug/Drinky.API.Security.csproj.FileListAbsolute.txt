@@ -1,0 +1,13 @@
+C:\dev\Drinky\Drinky.API.Security\obj\Debug\ResolveAssemblyReference.cache
+C:\dev\Drinky\Drinky.API.Security\bin\Debug\Drinky.API.Security.dll
+C:\dev\Drinky\Drinky.API.Security\bin\Debug\Drinky.API.Security.pdb
+C:\dev\Drinky\Drinky.API.Security\bin\Debug\System.Web.Http.dll
+C:\dev\Drinky\Drinky.API.Security\bin\Debug\System.Web.Http.WebHost.dll
+C:\dev\Drinky\Drinky.API.Security\bin\Debug\System.Net.Http.dll
+C:\dev\Drinky\Drinky.API.Security\bin\Debug\System.Net.Http.Formatting.dll
+C:\dev\Drinky\Drinky.API.Security\bin\Debug\System.Web.Http.xml
+C:\dev\Drinky\Drinky.API.Security\bin\Debug\System.Web.Http.WebHost.xml
+C:\dev\Drinky\Drinky.API.Security\bin\Debug\System.Net.Http.xml
+C:\dev\Drinky\Drinky.API.Security\bin\Debug\System.Net.Http.Formatting.xml
+C:\dev\Drinky\Drinky.API.Security\obj\Debug\Drinky.API.Security.dll
+C:\dev\Drinky\Drinky.API.Security\obj\Debug\Drinky.API.Security.pdb
