@@ -1,0 +1,8 @@
+package net.codegoggles.drinky;
+
+import android.app.Activity;
+import com.octo.android.robospice.SpiceManager;
+
+public class BaseActivity {
+
+}

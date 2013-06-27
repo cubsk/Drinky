@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.apache.http.auth.UsernamePasswordCredentials"/>
+<fullyQualifiedTypeName name="org.apache.http.impl.auth.BasicScheme"/>
+<fullyQualifiedTypeName name="org.apache.http.Header"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+</qualifiedTypeNameHistroy>

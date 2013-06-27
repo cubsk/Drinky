@@ -1,0 +1,69 @@
+package net.codegoggles.drinky;
+
+import android.os.Bundle;
+import android.view.Window;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.octo.android.robospice.persistence.DurationInMillis;
+import com.octo.android.robospice.persistence.exception.SpiceException;
+import com.octo.android.robospice.request.listener.RequestListener;
+import android.os.Bundle;
+import android.view.Menu;
+import android.widget.ListView;
+
+public class RecipeListActivity extends BaseActivity {
+
+
+    private static final String RECIPE_SEARCH_URI = "http://drinkyapi.azurewebsites.net/api/recipe";
+    
+    private RecipeListRequest recipeRequest;
+    
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_recipe_list);
+		
+		recipeRequest = new RecipeListRequest("");
+		
+		final ListView listview = (ListView) findViewById(R.id.recipelist);
+		
+	        
+		final RecipeAdapter adapter = new RecipeAdapter(this,new RecipeModel[] {});
+		listview.setAdapter(adapter);
+		
+	}
+
+	  @Override
+	    protected void onStart() {
+	        super.onStart();
+
+	        setProgressBarIndeterminate( false );
+	        setProgressBarVisibility( true );
+
+	        getSpiceManager().execute( weatherRequest, "json", DurationInMillis.ONE_MINUTE, new WeatherRequestListener() );
+	    }
+	  
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.recipe_list, menu);
+		return true;
+	}
+
+	
+	 public final class RecipeListRequestListener implements RequestListener<RecipeListModel> {
+
+	        @Override
+	        public void onRequestFailure( SpiceException spiceException ) {
+	            Toast.makeText( RecipeListActivity.this, "failure", Toast.LENGTH_SHORT ).show();
+	        }
+
+	        @Override
+	        public void onRequestSuccess( final RecipeListModel result ) {
+	            Toast.makeText( RecipeListActivity.this, "success", Toast.LENGTH_SHORT ).show();
+
+	        }
+	 }
+	
+}

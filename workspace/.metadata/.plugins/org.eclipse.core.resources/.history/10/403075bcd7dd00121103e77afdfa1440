@@ -1,0 +1,77 @@
+package net.codegoggles.drinky;
+
+import android.net.Uri;
+import android.os.Bundle;
+import android.app.Activity;
+import android.app.LoaderManager.LoaderCallbacks;
+import android.content.Loader;
+import android.view.Menu;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import net.codegoggles.drinky.data.*;
+import net.codegoggles.drinky.data.RESTLoader.RESTResponse;
+
+
+public class RecipeListActivity extends Activity implements LoaderCallbacks<RESTLoader.RESTResponse> {
+
+    private static final int LOADER_RECIPE_SEARCH = 0x1;
+    
+    private static final String ARGS_URI    = "net.codegoggles.drinky.recipe.list.ARGS_URI";
+    private static final String ARGS_PARAMS = "net.codegoggles.drinky.recipe.list.ARGS_PARAMS";
+    private static final String RECIPE_SEARCH_URI = "http://drinkyapi.azurewebsites.net/api/recipe";
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_recipe_list);
+		final ListView listview = (ListView) findViewById(R.id.recipelist);
+		
+
+		
+		ArrayAdapter<RecipeModel> test = new ArrayAdapter<RecipeModel>(this, R.layout.activity_recipe_row);
+		
+		Uri recipeSearchUri = Uri.parse(RECIPE_SEARCH_URI);
+	 	Bundle params = new Bundle();
+		Bundle args = new Bundle();
+		args.putParcelable(ARGS_URI, recipeSearchUri);
+		args.putParcelable(ARGS_PARAMS, params);
+	        
+		final RecipeAdapter adapter = new RecipeAdapter(this,new RecipeModel[] {});
+		listview.setAdapter(adapter);
+		
+		getLoaderManager().initLoader(LOADER_RECIPE_SEARCH, args, this);
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.recipe_list, menu);
+		return true;
+	}
+
+	@Override
+	public Loader<RESTLoader.RESTResponse> onCreateLoader(int id, Bundle args) {
+        if (args != null && args.containsKey(ARGS_URI) && args.containsKey(ARGS_PARAMS)) {
+            Uri    action = args.getParcelable(ARGS_URI);
+            Bundle params = args.getParcelable(ARGS_PARAMS);
+            
+            return new RESTLoader(this, RESTLoader.HTTPVerb.GET, action, params);
+        }
+        
+        return null;
+	}
+
+	@Override
+	public void onLoadFinished(Loader<RESTLoader.RESTResponse> arg0, RESTResponse arg1) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onLoaderReset(Loader<RESTLoader.RESTResponse> arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+}

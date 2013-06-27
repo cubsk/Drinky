@@ -1,0 +1,8 @@
+1372101979471	Rename resource 'emblem-special.png'
+1372102040814	Rename resource 'star-full.png'
+1372102048848	Rename resource 'star-empty.png'
+1372102173824	Rename resource 'start_full.png'
+1372280886661	Rename type 'RecipleListModel'
+1372350761149	Encapsulate field 'Id'
+1372351131785	Rename type 'RecipeService'
+1372352009482	Rename compilation unit 'BaseService.java'

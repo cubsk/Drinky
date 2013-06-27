@@ -1,0 +1,38 @@
+package net.codegoggles.drinky;
+
+import java.util.List;
+
+import com.google.api.client.util.Key;
+
+public class RecipeListItemModel {
+
+	@Key
+	private String Id;
+	@Key
+	private String Name;
+	@Key
+	private boolean IsFavorite;
+	
+	
+	public String getId() {
+		return Id;
+	}
+	public void setId(String id) {
+		Id = id;
+	}
+	public String getName() {
+		return Name;
+	}
+	public void setName(String name) {
+		Name = name;
+	}
+	public boolean isIsFavorite() {
+		return IsFavorite;
+	}
+	public void setIsFavorite(boolean isFavorite) {
+		IsFavorite = isFavorite;
+	}
+	
+
+	
+}
