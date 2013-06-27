@@ -1,0 +1,7 @@
+/Drinky.API/bin
+/Drinky.API/obj
+
+bin
+gen
+
+/Drinky.API.Security/obj/Debug/Drinky.API.Security.dll
