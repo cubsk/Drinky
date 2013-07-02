@@ -75,6 +75,7 @@ namespace Drinky.DAC
 
         static SessionManager()
         {
+            DateTime start = DateTime.Now;
             string connectionString = ConfigurationManager.ConnectionStrings["ApplicationServices"].ConnectionString;
             if (string.IsNullOrEmpty(connectionString))
                 throw new Exception("No connection string specified ");
@@ -102,6 +103,8 @@ namespace Drinky.DAC
             {
                 throw new Exception("Unable to initialize session factory : " + ex.Message, ex);
             }
+            DateTime end = DateTime.Now;
+            double duration = end.Subtract(start).Milliseconds;
 
         }
 
