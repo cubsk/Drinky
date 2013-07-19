@@ -46,7 +46,7 @@ namespace Drinky.API.Controllers
                 Recipe r = transaction.Session.Get<Recipe>(Id);
                 model.Id = r.Id;
                 model.Name = r.Name;
-                model.Preperation = r.Preparation;
+                model.Preparation = r.Preparation;
                 model.GlasswareType = r.Glassware.Name;
 
                 foreach (var component in r.Components.OrderBy(x => x.UnitOfMeasure.SortOrder).ThenByDescending(x => x.Quantity))

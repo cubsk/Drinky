@@ -15,12 +15,12 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class RecipeAdapter extends ArrayAdapter<RecipeViewModel>{
+public class RecipeAdapter extends ArrayAdapter<RecipeListItemViewModel>{
 
 	private final Context context;
-	private final ArrayList<RecipeViewModel> recipes;
+	private final ArrayList<RecipeListItemViewModel> recipes;
 	  
-	public RecipeAdapter(Context context, ArrayList<RecipeViewModel> recipes) {
+	public RecipeAdapter(Context context, ArrayList<RecipeListItemViewModel> recipes) {
 		super(context, R.layout.activity_recipe_row, recipes);
 		this.context = context;
 		this.recipes = recipes;
@@ -37,7 +37,7 @@ public class RecipeAdapter extends ArrayAdapter<RecipeViewModel>{
 	    TextView textView = (TextView) convertView.findViewById(R.id.label);
 	    ImageView imageView = (ImageView) convertView.findViewById(R.id.icon);
 	
-    	RecipeViewModel r = recipes.get(position);
+	    RecipeListItemViewModel r = recipes.get(position);
 	    textView.setText(r.getName());
 	    
 	    if(r.getIsFavorite()) {

@@ -1,29 +1,58 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".RecipeViewActivity" >
-
-
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="10dp" xmlns:android1="http://schemas.android.com/apk/res/android">
         
     	<TextView
         android:id="@+id/nameLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/recipe_view_name_label"/>
+        android:text="@string/recipe_view_name_label" 
+        android:paddingRight="20dp"
+        android:textStyle="bold"
+        />
 
         <TextView
         android:id="@+id/nameValue"
-        android:android:layout_toRightOf="@id/nameLabel"
-        android:layout_alignParentLeft="true"
-	    android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/nameLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="name value"
+         />
+        
+        <TextView
+        android:id="@+id/glasswareLabel"
+        android:layout_below="@id/nameValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recipe_view_glassware_label" 
+        android:paddingRight="20dp"
+        android:textStyle="bold"
+        />
 
-        android:text="sample value" />
+        <TextView
+        android:id="@+id/glasswareValue"
+        android:layout_toRightOf="@id/glasswareLabel"
+        android:layout_alignTop="@id/glasswareLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="glassware value"
+         />
+        
+        <TextView
+        android:id="@+id/ingredientsLabel"
+        android:layout_below="@id/glasswareLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recipe_view_ingredients_label" 
+        android:paddingRight="20dp"
+        android:textStyle="bold" 
+        />
+        
+		<ListView
+		    android:id="@+id/ingredientList"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:layout_below="@id/ingredientsLabel" />
     
 </RelativeLayout>

@@ -14,5 +14,7 @@
     
     
     <string name="recipe_view_name_label">Name:</string>
-
+	<string name="recipe_view_glassware_label">Glassware:</string>
+	<string name="recipe_view_ingredients_label">Ingredients:</string>
+	
 </resources>

@@ -9,7 +9,7 @@ namespace Drinky.API.Models.Recipes
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public string Preperation { get; set; }
+        public string Preparation { get; set; }
         public string GlasswareType { get; set; }
 
         public List<RecipeViewComponentModel> Components { get; set; }

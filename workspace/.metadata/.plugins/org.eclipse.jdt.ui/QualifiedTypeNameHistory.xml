@@ -5,4 +5,12 @@
 <fullyQualifiedTypeName name="org.apache.http.Header"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="android.widget.TextView.OnEditorActionListener"/>
+<fullyQualifiedTypeName name="android.view.inputmethod.EditorInfo"/>
+<fullyQualifiedTypeName name="android.widget.AdapterView"/>
+<fullyQualifiedTypeName name="android.widget.AdapterView.OnItemClickListener"/>
+<fullyQualifiedTypeName name="android.content.Intent"/>
+<fullyQualifiedTypeName name="android.widget.TextView"/>
+<fullyQualifiedTypeName name="net.codegoggles.drinky.R.id"/>
+<fullyQualifiedTypeName name="net.codegoggles.drinky.BaseActivity"/>
 </qualifiedTypeNameHistroy>

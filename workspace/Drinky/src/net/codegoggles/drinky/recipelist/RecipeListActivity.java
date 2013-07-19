@@ -38,9 +38,9 @@ public class RecipeListActivity extends BaseActivity {
     
     private RecipeListRequest recipeRequest;
     private ListView listView;
-    private TextView filterText;
-    
+    private TextView filterText;   
     private RecipeAdapter adapter;
+    
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -49,7 +49,7 @@ public class RecipeListActivity extends BaseActivity {
 		recipeRequest = new RecipeListRequest("");
 		
 		listView = (ListView) findViewById(R.id.recipelist);
-		adapter = new RecipeAdapter(this,new ArrayList<RecipeViewModel>());
+		adapter = new RecipeAdapter(this,new ArrayList<RecipeListItemViewModel>());
 		listView.setAdapter(adapter);
 		
 		filterText = (TextView)findViewById(R.id.recipe_filter);
@@ -71,7 +71,7 @@ public class RecipeListActivity extends BaseActivity {
 		listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 			  @Override
 			  public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-			  		RecipeViewModel item = adapter.getItem(position);
+				  	RecipeListItemViewModel item = adapter.getItem(position);
 			  		String recipeId = item.getId();
 			  		viewRecipe(recipeId);
 			  }
@@ -88,7 +88,7 @@ public class RecipeListActivity extends BaseActivity {
     protected void onStart() {
         super.onStart();
 
-        setProgressBarIndeterminate( false );
+        setProgressBarIndeterminate( true );
         setProgressBarVisibility( true );
 
         getSpiceManager().execute( recipeRequest, "json", DurationInMillis.ONE_MINUTE, new RecipeListRequestListener() );
@@ -113,19 +113,19 @@ public class RecipeListActivity extends BaseActivity {
 	        public void onRequestSuccess( final RecipeListModel result ) {
 	            
 
-    			ArrayList<RecipeViewModel> recipeModels = new ArrayList<RecipeViewModel>();
+    			ArrayList<RecipeListItemViewModel> recipeModels = new ArrayList<RecipeListItemViewModel>();
     			
     			for(int i = 0; i < result.size(); i++) {
     				RecipeListItemModel item = result.get(i);
     				
-    				recipeModels.add(new RecipeViewModel(item.getId(), item.getName(), item.isIsFavorite()));
+    				recipeModels.add(new RecipeListItemViewModel(item.getId(), item.getName(), item.isIsFavorite()));
     			}
     			int size = recipeModels.size();
     			
 	    		adapter.clear();
 	    		adapter.addAll(recipeModels);
 	    		adapter.notifyDataSetChanged();
-	    		Toast.makeText( RecipeListActivity.this, "updated recipe list: " + size, Toast.LENGTH_SHORT ).show();
+	    		Toast.makeText( RecipeListActivity.this, "updated recipe list", Toast.LENGTH_SHORT ).show();
 	        }
 	 }
 	

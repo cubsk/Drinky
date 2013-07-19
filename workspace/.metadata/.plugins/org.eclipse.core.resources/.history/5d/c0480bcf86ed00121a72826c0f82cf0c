@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:layout_margin="10dp"
+    >
+
+        
+    	<TextView
+        android:id="@+id/nameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recipe_view_name_label" 
+        android:paddingRight="20dp"
+        android:textStyle="bold"
+        />
+
+        <TextView
+        android:id="@+id/nameValue"
+        android:layout_toRightOf="@id/nameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="name value"
+         />
+        
+        <TextView
+        android:id="@+id/glasswareLabel"
+        android:layout_below="@id/nameValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recipe_view_glassware_label" 
+        android:paddingRight="20dp"
+        android:textStyle="bold"
+        />
+
+        <TextView
+        android:id="@+id/glasswareValue"
+        android:layout_toRightOf="@id/glasswareLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="glassware value"
+         />
+    
+</RelativeLayout>
